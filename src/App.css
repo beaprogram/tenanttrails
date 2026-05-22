@@ -1,0 +1,11 @@
+.app {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.landing {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 80px 24px 96px;
+  text-align: center;
+}
