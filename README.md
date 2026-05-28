@@ -1,6 +1,6 @@
 # TenantTrails
 
-Landing page for the TenantTrails apartment review platform. Built with React + Vite for CSCI 4177/5709 Lab 1.
+Apartment review platform for CSCI 4177/5709. Built with React + Vite + React Router.
 
 ## Run locally
 
@@ -9,7 +9,14 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173 in your browser.
+Open http://localhost:5173
+
+## Demo login
+
+- Email: `alex@dal.ca`
+- Password: `password123`
+
+Or use the Sign Up page to create any account.
 
 ## Build for production
 
@@ -17,18 +24,34 @@ Open http://localhost:5173 in your browser.
 npm run build
 ```
 
-The optimized output is in `dist/`. This is the folder Netlify and Vercel deploy.
+Output goes to `dist/`. Netlify serves this folder.
 
-## Project structure
+## Routes
+
+| Path         | Page       | Notes                          |
+|--------------|------------|--------------------------------|
+| `/`          | Landing    | Public marketing page          |
+| `/login`     | Login      | Form with validation           |
+| `/signup`    | Signup     | Form with validation           |
+| `/dashboard` | Dashboard  | Protected — requires login     |
+
+## Structure
 
 ```
 src/
-├── main.jsx              Entry point; renders App into #root
-├── App.jsx               Composes the landing page
-├── App.css               App-level layout
-├── index.css             Global resets + body font
-└── components/
-    ├── Header.jsx        Logo + Sign In + Get Started
-    ├── Hero.jsx          Badge, headline, CTAs
-    └── Features.jsx      Three feature cards
+├── pages/        Landing, Login, Signup, Dashboard
+├── components/   Header, Hero, Features, ApartmentCard, ProtectedRoute
+├── context/      AuthContext (shared auth state)
+├── data/         mockData.js (apartments + demo user)
+├── App.jsx       Routing + providers
+├── main.jsx      Entry point
+└── index.css     Global styles
 ```
+
+## Features (Lab 2)
+
+- **State management** — useState/useMemo in Dashboard for search/filter/sort
+- **Routing** — React Router with BrowserRouter, Link, useNavigate
+- **Shared state** — AuthContext via Context API + custom useAuth hook
+- **Forms & validation** — controlled inputs with per-field error messages
+- **Protected routes** — ProtectedRoute redirects to /login when no user

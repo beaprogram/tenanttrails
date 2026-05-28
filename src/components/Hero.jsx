@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 function Hero() {
@@ -14,8 +15,8 @@ function Hero() {
         summaries. Make informed decisions about where you live.
       </p>
       <div className="hero__buttons">
-        <button className="btn btn--primary">Create Free Account</button>
-        <button className="btn btn--secondary">Sign In</button>
+        <Link to="/signup" className="btn btn--primary">Create Free Account</Link>
+        <Link to="/login" className="btn btn--secondary">Sign In</Link>
       </div>
     </section>
   )

@@ -31,6 +31,8 @@
 }
 
 .header__cta {
+  display: inline-block;
+  text-decoration: none;
   background: #2563eb;
   color: white;
   font-size: 14px;

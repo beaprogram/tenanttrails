@@ -1,17 +1,32 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute'
+import Landing from './pages/Landing'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main className="landing">
-        <Hero />
-        <Features />
-      </main>
-    </div>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          {/* Unknown URLs fall back to the landing page */}
+          <Route path="*" element={<Landing />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   )
 }
 

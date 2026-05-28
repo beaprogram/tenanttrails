@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 function Header() {
@@ -5,8 +6,8 @@ function Header() {
     <header className="header">
       <div className="header__logo">TenantTrails</div>
       <nav className="header__nav">
-        <a href="#signin" className="header__link">Sign In</a>
-        <button className="header__cta">Get Started</button>
+        <Link to="/login" className="header__link">Sign In</Link>
+        <Link to="/signup" className="header__cta">Get Started</Link>
       </nav>
     </header>
   )
