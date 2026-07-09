@@ -1,0 +1,50 @@
+.ai-summary {
+  margin-bottom: 32px;
+}
+
+.ai-summary-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-top: 3px solid #2563eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.ai-summary-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+.ai-summary-text {
+  margin: 0;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.ai-issues {
+  margin-top: 20px;
+}
+
+.ai-issues h3 {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: #111827;
+}
+
+.ai-issues-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-issue-tag {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 999px;
+}

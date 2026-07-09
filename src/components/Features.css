@@ -1,0 +1,39 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.feature__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.feature__body {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .features {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 320px;
+  }
+}

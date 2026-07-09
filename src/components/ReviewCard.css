@@ -1,0 +1,35 @@
+.review-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.review-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author {
+  font-weight: 600;
+  color: #111827;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.review-body {
+  margin: 0;
+  color: #374151;
+  line-height: 1.6;
+}

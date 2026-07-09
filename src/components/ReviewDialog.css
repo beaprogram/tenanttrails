@@ -1,0 +1,111 @@
+.review-dialog {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dialog-header h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #111827;
+}
+
+.dialog-close {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dialog-close:hover {
+  color: #111827;
+}
+
+.dialog-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.star-input {
+  display: flex;
+  gap: 4px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.star-input-on {
+  color: #f59e0b;
+}
+
+.star-input-off {
+  color: #d1d5db;
+}
+
+.dialog-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  margin-bottom: 16px;
+}
+
+.dialog-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.dialog-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin: 0 0 12px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.dialog-cancel,
+.dialog-submit {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.dialog-cancel {
+  background: #fff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.dialog-cancel:hover {
+  background: #f9fafb;
+}
+
+.dialog-submit {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.dialog-submit:hover {
+  background: #1d4ed8;
+}
